@@ -18,6 +18,10 @@ app.use(cors());
 app.use("/api/products", routerProduct);
 app.use("/api/users", routerUsers);
 app.use("/api/votes", routerVotes)
+app.use("/get", (req, res)=>{
+  res.json({msg: 'FUNCIONAAAAAAAAAA!!!!!'});
+})
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
